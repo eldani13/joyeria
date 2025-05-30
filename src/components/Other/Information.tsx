@@ -71,7 +71,7 @@ export default function Information() {
             <p className="text-gray-700">
               Each piece of jewelry is the result of hours of handwork and
               precision. Expert artisans bring to life pieces that speak for
-              themselves.{" "}
+              themselves.{" "} 
             </p>
           </div>
         </div>
