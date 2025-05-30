@@ -17,9 +17,7 @@ export default function Information() {
               Our Historys
             </h3>
             <p className="text-gray-700">
-              Since 2010, we've been merging artisanal tradition and
-              contemporary design. Our jewelry reflects passion, detail, and a
-              love of art.{" "}
+              {"Since 2010, we've been merging artisanal tradition and contemporary design. Our jewelry reflects passion, detail, and a love of art."}
             </p>
           </div>
 
