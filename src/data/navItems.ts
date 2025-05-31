@@ -1,5 +1,5 @@
 export const navItems = [
-  { label: "Ring", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Bracelet", href: "#" },
   { label: "Necklaces", href: "#" },
   { label: "Earrings", href: "#" },
