@@ -26,16 +26,13 @@ export async function generateStaticParams() {
 }
 
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
-    if (!params?.slug) {
-    return <div>Missing slug</div>;
-  }
-  const slug = params.slug.toLowerCase()
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug.toLowerCase();
 
   const category = categories.find(
     (cat) => cat.name.toLowerCase() === slug
-  );
-
+  )
   if (!category) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -57,9 +54,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     );
   }
 
-  const categoryProducts = allProducts.filter(
-    (product) => product.category.toLowerCase() === params.slug.toLowerCase()
-  );
+const categoryProducts = allProducts.filter(
+  (product) => product.category.toLowerCase() === resolvedParams.slug.toLowerCase()
+);
+
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-20 bg-white">
