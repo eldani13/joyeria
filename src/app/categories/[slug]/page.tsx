@@ -13,11 +13,6 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { GrView } from "react-icons/gr";
 export const dynamicParams = true;
 
-type CategoryPageProps = {
-  params: {
-    slug: string;
-  };
-};
 
 export async function generateStaticParams() {
   return categories.map((category) => ({
