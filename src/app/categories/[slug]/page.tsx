@@ -11,10 +11,29 @@ import {
 } from "react-icons/fa";
 import { MdAddShoppingCart } from "react-icons/md";
 import { GrView } from "react-icons/gr";
+export const dynamicParams = true;
 
-export default function CategoryPage({ params }: { params: { slug: string } }) {
+type CategoryPageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export async function generateStaticParams() {
+  return categories.map((category) => ({
+    slug: category.name.toLowerCase(),
+  }));
+}
+
+
+export default async function CategoryPage({ params }: CategoryPageProps) {
+    if (!params?.slug) {
+    return <div>Missing slug</div>;
+  }
+  const slug = params.slug.toLowerCase()
+
   const category = categories.find(
-    (cat) => cat.name.toLowerCase() === params.slug.toLowerCase()
+    (cat) => cat.name.toLowerCase() === slug
   );
 
   if (!category) {
