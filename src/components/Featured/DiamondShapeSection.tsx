@@ -1,11 +1,13 @@
 import Image from "next/image"
 import { diamondShapes } from "@/data/diamantes"
+import { FaArrowRightLong } from "react-icons/fa6";
+
 
 export default function DiamondShapeSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl font-semibold text-[#3c2205] mb-12">
+        <h2 className="diamante-text text-4xl  font-semibold text-[#3c2205] mb-12">
           Shop by diamond shape
         </h2>
 
@@ -20,12 +22,12 @@ export default function DiamondShapeSection() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="mt-4 sm:mt-6 font-semibold text-[#3c2205]">
+              <h3 className="diamante-h3-text mt-4 sm:mt-6 font-semibold text-[#3c2205]">
                 {item.name}
               </h3>
               <p className="text-sm text-gray-500 mt-1">{item.description}</p>
               <button className="mt-4 w-8 h-8 rounded-full bg-[#7c5c35] text-white flex items-center justify-center hover:bg-[#5a4125] transition">
-                →
+                <FaArrowRightLong />
               </button>
             </div>
           ))}

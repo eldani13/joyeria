@@ -32,7 +32,7 @@ export default function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="hover:text-black transition"
+              className="header-text hover:text-black transition"
             >
               {item.label}
             </a>

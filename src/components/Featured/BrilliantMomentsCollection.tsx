@@ -4,7 +4,7 @@ export default function BrilliantMomentsCollection() {
   return (
     <section className="py-20 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-semibold text-[#3c2205]">
+        <h2 className="brillante-text text-4xl text-[#3c2205]">
           Brilliant moments collection
         </h2>
         <p className="text-gray-600 mt-2">

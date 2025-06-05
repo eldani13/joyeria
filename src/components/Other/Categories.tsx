@@ -5,7 +5,7 @@ import { categories } from "@/data/categories";
 export default function Categories() {
   return (
     <section className="py-20 bg-[#F9F9F7] text-center px-4 sm:px-6">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-12">
+      <h2 className="categoria-h2 text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-12">
         Categories
       </h2>
 
@@ -24,7 +24,7 @@ export default function Categories() {
                     className="object-contain"
                   />
                 </div>
-                <p className="mt-4 text-base font-medium text-gray-800">{cat.name}</p>
+                <span className="categoria-span mt-4 text-base font-medium text-gray-800">{cat.name}</span>
               </div>
             </Link>
           );
